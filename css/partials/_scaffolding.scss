@@ -1,0 +1,253 @@
+/* 
+TABLE OF CONTENTS
+  HTML & Resets
+  Grid
+  Floats
+  Form Elements
+*/
+   
+// =======================================================================
+// HTML & Resets
+// =======================================================================
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin:0;
+    padding:0; 
+}
+ 
+*, *:before, *:after {
+    @include box-sizing; 
+}
+
+article,aside,figure,figure img,figcaption,hgroup,footer,header,nav,section,video,object {
+    display:block
+}
+
+html {
+    font-size: 62.5%; 
+}
+
+body {
+    color: $text-color; 
+    -ms-text-size-adjust:100%;
+    -webkit-text-size-adjust:100%;
+    font-size: 1.5rem; 
+    min-width:$content-width;
+    @include screen-large {
+        min-width:0; 
+        max-width:$content-width;
+    }
+}
+
+body, input, textarea, select, button {
+    font-family: $font-family-body;
+}
+
+a, a:visited {
+    color: $link-color;
+    text-decoration: none;
+    &:hover, &:active {
+        color:darken($link-color,10%);
+    }
+}
+    
+a:hover, :focus, li:hover, img:hover, input:hover {
+    @include transition(all 0.3s linear);
+}
+
+p { 
+    margin-bottom:15px;
+    line-height:145%;
+} 
+
+hr {
+    display: block;
+    height:1px;
+    background:$border-dark;
+    color:$border-dark;
+    border:0;
+}
+
+figure {
+    position:relative;
+    text-align:center;
+    img {
+        display: block;
+        margin:0 auto;
+    }
+    figcaption {
+        font-size:1rem;
+    }
+}
+
+img {
+    height: auto;
+    max-width:100%
+}
+    
+h1, h2, h3, h4, h5 {
+    font-family: $font-family-display;
+    @include tuning;
+}
+
+h1 {
+    font-size:2.4rem;
+}
+
+h2 {
+    font-size:2rem;
+}
+        
+h3 {
+    font-size:1.8rem;
+}
+
+h4 {
+    font-size:1.4rem;
+}
+
+h5 {
+    font-size: 1rem
+}
+
+h6 {
+    font-size: .8rem;
+}
+
+blockquote {
+    margin:25px 45px;
+}
+
+pre, code {
+    font: 1.25rem "Courier New", Courier, monospace;
+}
+
+code {
+    background:$bg-lt;
+    padding:10px;
+    display:block;
+}
+
+
+
+// =======================================================================
+// Grid & Structure
+// =======================================================================
+
+.row {
+    max-width: $content-width;
+    clear: both;
+    margin:0 auto;
+    padding:0 15px;
+    @extend .clearfix;
+    .col {
+        float: left;
+        margin:25px 1.6% 25px 0;
+        display: block;
+        &:last-child,&.twelvecol {
+            margin-right:0;
+        }
+    }
+    .onecol {
+        width:6.866%;
+    }
+
+    .twocol {
+        width:15.33%;
+    }
+
+    .threecol {
+        width:23.8%;
+    }    
+
+    .fourcol {
+        width:32.26%;
+    }
+
+    .fivecol {
+        width:40.73%;
+    }   
+
+    .sixcol {
+        width:49.2%;
+    }
+
+    .sevencol {
+        width:57.66%;
+    }
+
+    .eightcol {
+        width:66.13%;
+    }
+
+    .ninecol {
+        width:74.06%
+    }
+
+    .tencol {
+        width:83.06%
+    }
+
+    .elevencol {
+        width:91.53%
+    }
+
+    .twelvecol {
+        width:auto;
+    }    
+}
+
+
+
+
+// =======================================================================
+// Floats
+// =======================================================================
+
+.left {
+    float:left
+}
+
+.right {
+    float:right
+}
+
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+    
+// =======================================================================
+// Form Elements
+// =======================================================================
+
+input[type=text], input[type=email], input[type=password], textarea {
+    border-style:1px solid $border-dark;
+    padding:8px;
+    color:$text-color;
+    -webkit-appearance: none;
+}
+
+input:focus, textarea:focus {
+    border-color:#333;
+}
+
+textarea {
+    width:100%;
+}   
+
+.btn, button, input[type=submit] {
+    background:#333;
+    color:#fff;
+    padding: 12px 32px;
+    border-radius:2px;
+    cursor: pointer;
+    @include appearance(none);
+    border:none;
+    @include small-label
+}
