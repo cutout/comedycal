@@ -1,0 +1,133 @@
+// Media queries & breakpoints //
+
+@mixin screen-large {
+  @media only screen and (max-width: $content-width) {
+    @content;
+  }
+}
+
+@mixin screen-med {
+  @media only screen and (max-width: 960px) {
+    @content;
+  }
+}
+
+@mixin screen-sm {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin screen-xs {
+  @media only screen and (max-width: 400px) {
+    @content;
+  }
+}
+
+
+// Animations //
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+
+
+
+// Misc Vendor Prefixes //
+
+@mixin transition ($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+@mixin box-sizing {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin appearance($args) {
+    -webkit-appearance: $args;
+    -moz-appearance: $args;
+    appearance: $args; 
+}
+
+@mixin user-select($args) {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+
+// Hide //
+
+@mixin visuallyhidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+
+// Type //
+
+@mixin tuning {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+@mixin small-label {
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  @include tuning;
+  font: {
+    weight:600;
+    size:1.1rem;
+  }
+}
+
+
+// Positioning //
+
+@mixin screen-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+}
