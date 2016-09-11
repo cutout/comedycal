@@ -2,6 +2,7 @@
 Created on Sep 11, 2016
 
 @author: pgrewal
+Event details
 '''
 
 class Event(object):
