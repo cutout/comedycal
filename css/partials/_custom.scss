@@ -1,0 +1,78 @@
+.shows {
+  list-style: none;
+  margin-top: 50px;
+  li {
+    overflow: hidden;
+    margin-bottom: 10px;
+    min-height: 410px;
+    position: relative;
+    background: rgba(255,255,255,.7);
+    margin:0;
+    border-color: $bg-lt;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    width:25%;
+    float:left;
+    cursor: pointer;
+    &:hover {
+      background: rgba(255,255,255,1);
+      .pic .thumb {
+        opacity: 1;
+      }
+    }
+    &:nth-child(4) {
+      border-right:none;
+    }
+  }
+  .pic {
+    margin-bottom: 20px;
+    background: #171717;
+    .thumb {
+      width: 100%;
+      display: block;
+      height: 230px;
+      background-position-x: 50%;
+      background-position-y:50%;
+      background-repeat: repeat;
+      background-size: cover;
+      opacity: .9
+    }
+  }
+  .show {
+    padding: 0 25px;
+  }
+  .meta {
+    font-size: $font-size-small;
+    .artist {
+      font-size: 1.8rem;
+      font-family:$font-weight-bold;
+      margin-bottom: 3px;
+    }
+    .date {
+      margin-top: 15px;
+      font-size: 1.2rem;
+    }
+    .loc {
+      a {
+        font-family:$font-weight-medium;
+      }
+    }
+  }
+  button {
+    border-radius: 0;
+    margin-top: 12px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: inherit;
+    border:2px solid $blue;
+    position: absolute;
+    bottom:30px;
+  }
+}
+
+.listings {
+  width:100%;
+  th {
+    text-align: left;
+  }
+}
