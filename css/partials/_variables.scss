@@ -1,22 +1,28 @@
 // Grid & Structure //
-	$content-width:			1280px;
+	$content-width:			100%;
 
 
 // Colors //
 	$text-color:			#111;
 	$text-color-lt:			#505050;
-	
-	$link-color:			#1899CB;  
-	
+
+	$link-color:			#41caff;
+
 	$border-lt:				#d7d7d7;
 	$border-dark:			#555;
-	
+
 	$bg-lt:					#f3f3f3;
 	$bg-dark:				#333;
 
 	$highlight:				#fdcf54;
-	
+
+	$blue:						#7EDBED;
 
 // Type //
-	$font-family-display:	Georgia,'Times New Roman', serif;
-	$font-family-body:		'Helvetica Neue', Arial, sans-serif;
+	$font-family-display:	'rubikregular','Helvetica Neue', Arial, sans-serif;
+	$font-family-body:		'rubikregular','Helvetica Neue', Arial, sans-serif;
+
+	$font-weight-bold:						'rubikbold','Helvetica Neue', Arial, sans-serif;
+	$font-weight-medium:					'rubikmedium','Helvetica Neue', Arial, sans-serif;
+
+	$font-size-small:					1.25rem;
