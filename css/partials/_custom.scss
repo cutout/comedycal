@@ -4,16 +4,15 @@
   li {
     overflow: hidden;
     margin-bottom: 10px;
-    min-height: 410px;
+    min-height: 420px;
     position: relative;
     background: rgba(255,255,255,.7);
     margin:0;
     border-color: $bg-lt;
     border-style: solid;
     border-width: 0 2px 2px 0;
-    width:25%;
+    width:33.3%;
     float:left;
-    cursor: pointer;
     &:hover {
       background: rgba(255,255,255,1);
       .pic .thumb {
@@ -39,7 +38,7 @@
     }
   }
   .show {
-    padding: 0 25px;
+    padding: 0 30px;
   }
   .meta {
     font-size: $font-size-small;
@@ -47,6 +46,9 @@
       font-size: 1.8rem;
       font-family:$font-weight-bold;
       margin-bottom: 3px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     .date {
       margin-top: 15px;
@@ -64,7 +66,7 @@
     padding: 10px 20px;
     background-color: transparent;
     color: inherit;
-    border:2px solid $blue;
+    border:2px solid #b3c9ce;
     position: absolute;
     bottom:30px;
   }

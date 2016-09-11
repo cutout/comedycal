@@ -395,16 +395,15 @@ textarea {
   .shows li {
     overflow: hidden;
     margin-bottom: 10px;
-    min-height: 410px;
+    min-height: 420px;
     position: relative;
     background: rgba(255, 255, 255, 0.7);
     margin: 0;
     border-color: #f3f3f3;
     border-style: solid;
     border-width: 0 2px 2px 0;
-    width: 25%;
-    float: left;
-    cursor: pointer; }
+    width: 33.3%;
+    float: left; }
     .shows li:hover {
       background: white; }
       .shows li:hover .pic .thumb {
@@ -424,13 +423,16 @@ textarea {
       background-size: cover;
       opacity: 0.9; }
   .shows .show {
-    padding: 0 25px; }
+    padding: 0 30px; }
   .shows .meta {
     font-size: 1.25rem; }
     .shows .meta .artist {
       font-size: 1.8rem;
       font-family: "rubikbold", "Helvetica Neue", Arial, sans-serif;
-      margin-bottom: 3px; }
+      margin-bottom: 3px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
     .shows .meta .date {
       margin-top: 15px;
       font-size: 1.2rem; }
@@ -442,7 +444,7 @@ textarea {
     padding: 10px 20px;
     background-color: transparent;
     color: inherit;
-    border: 2px solid #7EDBED;
+    border: 2px solid #b3c9ce;
     position: absolute;
     bottom: 30px; }
 
