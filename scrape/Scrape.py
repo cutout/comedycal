@@ -1,7 +1,7 @@
 '''
 Created on Sep 10, 2016
 
-@author: pgrewal
+@author: pg
 '''
 
 from bs4 import BeautifulSoup   # scrape
